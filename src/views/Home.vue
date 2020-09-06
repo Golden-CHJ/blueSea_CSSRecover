@@ -1,18 +1,32 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <view-panel :style="style"></view-panel>
+    <control-panel @changeStylePanel="changeStyleView"></control-panel>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import controlPanel from "../components/controlPanel.vue";
+import viewPanel from "../components/view.vue";
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    HelloWorld
-  }
-}
+    controlPanel,
+    viewPanel,
+  },
+  data() {
+    return {
+      style: {},
+    };
+  },
+  methods: {
+    changeStyleView: function (style) {
+      console.log(style);
+      this.style = style;
+    },
+  },
+};
 </script>
+
+<style lang="stylus"></style>
