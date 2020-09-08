@@ -14,7 +14,7 @@
 import controlPanel from "../../components/controlPanel";
 import tip from "../../components/tip";
 export default {
-  name: "A1",
+  name: "A3",
   components: {
     controlPanel,
     tip,
